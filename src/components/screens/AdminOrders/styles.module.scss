@@ -1,0 +1,14 @@
+.orderItem {
+  @apply text-[12px] bg-white p-3 rounded-[10px] mb-6;
+  display: grid;
+  grid-template-columns: 20% 25% 30% 25%;
+  justify-items: center;
+  align-items: center;
+}
+
+.orderHeader {
+  @apply text-[12px] p-3 mb-3;
+  display: grid;
+  grid-template-columns: 20% 25% 30% 25%;
+  justify-items: center;
+}

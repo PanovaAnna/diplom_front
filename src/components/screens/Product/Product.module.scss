@@ -1,0 +1,21 @@
+.counter {
+  width: 83px;
+  height: 35px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 15px;
+  background-color: #F2F2F3;
+  font-size: 15px;
+  font-weight: 500;
+
+  button {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+.minus:hover, .plus:hover {
+  background-color: white;
+  border-radius: 50%;
+}

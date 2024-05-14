@@ -1,0 +1,20 @@
+.cart {
+  background-color: #F9F9F9;
+}
+
+.wrapper {
+  padding: 10px 0 5px;
+}
+
+.textArea {
+  resize: none;
+  width: 100%;
+  padding: 0.75rem;
+  height: 70px;
+  margin-top: 10px;
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+

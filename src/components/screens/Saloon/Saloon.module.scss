@@ -1,0 +1,162 @@
+.main {
+  @apply p-5 flex flex-col gap-8;
+  margin: 0 auto;
+}
+
+.headerImg {
+  @apply h-full w-full object-cover rounded-b-xl filter brightness-[60%];
+}
+
+.navList {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  column-gap: 8px;
+  padding: 0 20px 20px;
+}
+
+.navItem {
+  background-color: #FFFFFF;
+  border-radius: 25px;
+  padding: 7px 15px;
+  min-width: 80px;
+  font-size: 12px;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.productList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-content: center;
+}
+
+.product {
+  position: relative;
+  padding: 4px;
+  background: #fff;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 300px;
+  box-shadow: 0px 0px 2px 0px rgba(34, 60, 80, 0.2);
+
+  img {
+    @apply h-[150px] rounded-[12px] mb-2.5 cursor-pointer;
+  }
+}
+
+.counter {
+  display: flex;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #F8A917;
+  padding: 3px;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  color: white;
+  font-weight: 700;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.productBtnDefault {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  width: 100%;
+  padding: 10px 0;
+  background-color: #FF7020;
+  border-radius: 8px;
+  color: white;
+  transition: color 0.3s;
+
+  &:after {
+    content: "Добавить";
+  }
+}
+
+.btnWrapper {
+
+  .productBtnDefault {
+
+    position: absolute;
+    z-index: 6;
+    animation: btnShow 0.2s forwards;
+    font-size: 14px;
+    padding: 9px 0;
+
+    &:after {
+      content: "+";
+    }
+  }
+
+  .productBtnMinus {
+    display: block;
+    animation: minusShow 0.2s forwards;
+  }
+
+}
+
+.productBtnMinus {
+  display: none;
+  background-color: #E64D44;
+  animation-name: btnShow;
+  animation-duration: 0.2s;
+  width: 49%;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  padding: 9px 0;
+  border-radius: 8px;
+  color: white;
+  position: relative;
+  z-index: 5;
+  transition: color 0.3s;
+}
+
+@keyframes minusShow {
+  from {
+    transform: scale(0.6);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes btnShow {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: 51%;
+    width: 49%;
+  }
+}
+
+@media (max-width: 400px) {
+
+  .productList {
+    gap: 10px;
+  }
+
+  .product {
+    min-height: 260px;
+  }
+
+  .product img {
+    height: 120px;
+  }
+}
+

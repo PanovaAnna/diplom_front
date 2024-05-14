@@ -1,1 +1,1 @@
-# diplom_front
+# frontdiplom
